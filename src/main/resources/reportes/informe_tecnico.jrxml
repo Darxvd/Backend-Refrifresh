@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="informe_tecnico" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4c1c9eb-1125-48b0-8a99-d313e2d06545">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Refrifresh_connection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="id_info" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT bd_refrifresh.tb_tecnico.id_tecnico,
+	bd_refrifresh.tb_tecnico.tec_tecnico,
+	bd_refrifresh.tb_tecnico.act_tecnico,
+	bd_refrifresh.tb_empresa.act_empresa,
+	bd_refrifresh.tb_empresa.dir_empresa,
+	bd_refrifresh.tb_empresa.nco_empresa,
+	bd_refrifresh.tb_empresa.rzc_empresa,
+	bd_refrifresh.tb_empresa.ruc_empresa,
+	bd_refrifresh.tb_empresa.id_empresa,
+	bd_refrifresh.tb_empresa.dis_empresa,
+	bd_refrifresh.tb_empresa.ruc_empresa,
+	bd_refrifresh.tb_empresa.rzc_empresa,
+	bd_refrifresh.tb_empresa.nco_empresa,
+	bd_refrifresh.tb_empresa.dir_empresa,
+	bd_refrifresh.tb_empresa.dis_empresa,
+	bd_refrifresh.tb_tecnico.tec_tecnico,
+	bd_refrifresh.tb_tecnico.tec_tecnico,
+	bd_refrifresh.tb_empresa.ruc_empresa,
+	bd_refrifresh.tb_empresa.nco_empresa,
+	bd_refrifresh.tb_empresa.dir_empresa,
+	bd_refrifresh.tb_empresa.rzc_empresa,
+	bd_refrifresh.tb_empresa.dis_empresa,
+	bd_refrifresh.tb_empresa.act_empresa,
+	bd_refrifresh.tb_informetecnico.falla_info,
+	bd_refrifresh.tb_informetecnico.obser_info,
+	bd_refrifresh.tb_informetecnico.reco_info,
+	bd_refrifresh.tb_informetecnico.fecha_info,
+	bd_refrifresh.tb_informetecnico.hora_infor,
+	bd_refrifresh.tb_informetecnico.nserie_maquina,
+	bd_refrifresh.tb_informetecnico.nom_maquina,
+	bd_refrifresh.tb_informetecnico.mca_maquina,
+	bd_refrifresh.tb_informetecnico.mod_maquina,
+	bd_refrifresh.tb_informetecnico.arubi_maquina,
+	bd_refrifresh.tb_informetecnico.volt_maquina,
+	bd_refrifresh.tb_informetecnico.amp_maquina,
+	bd_refrifresh.tb_informetecnico.pot_maquina,
+	bd_refrifresh.tb_informetecnico.tem_maquina,
+	bd_refrifresh.tb_informetecnico.pre_maquina,
+	bd_refrifresh.tb_informetecnico.gas_maquina,
+	bd_refrifresh.tb_informetecnico.otros_maquina,
+	bd_refrifresh.tb_informetecnico.act_maquina,
+	bd_refrifresh.tb_informetecnico.id_info
+FROM bd_refrifresh.tb_informetecnico
+	INNER JOIN bd_refrifresh.tb_tecnico ON 
+	 bd_refrifresh.tb_informetecnico.id_tecnico = bd_refrifresh.tb_tecnico.id_tecnico 
+	INNER JOIN bd_refrifresh.tb_empresa ON 
+	 bd_refrifresh.tb_informetecnico.id_empresa = bd_refrifresh.tb_empresa.id_empresa
+	 WHERE 
+	 bd_refrifresh.tb_informetecnico.id_info = $P{id_info}]]>
+	</queryString>
+	<field name="id_tecnico" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_tecnico"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_tecnico"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_tecnico"/>
+	</field>
+	<field name="tec_tecnico" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tec_tecnico"/>
+		<property name="com.jaspersoft.studio.field.label" value="tec_tecnico"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_tecnico"/>
+	</field>
+	<field name="act_tecnico" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="act_tecnico"/>
+		<property name="com.jaspersoft.studio.field.label" value="act_tecnico"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_tecnico"/>
+	</field>
+	<field name="act_empresa" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="act_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="act_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="dir_empresa" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dir_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="dir_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="nco_empresa" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nco_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="nco_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="rzc_empresa" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rzc_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="rzc_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="ruc_empresa" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ruc_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="ruc_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="id_empresa" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="dis_empresa" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dis_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="dis_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="COLUMN_11" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ruc_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="ruc_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="COLUMN_12" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rzc_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="rzc_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="COLUMN_13" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nco_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="nco_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="COLUMN_14" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dir_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="dir_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="COLUMN_15" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dis_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="dis_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="COLUMN_16" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tec_tecnico"/>
+		<property name="com.jaspersoft.studio.field.label" value="tec_tecnico"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_tecnico"/>
+	</field>
+	<field name="COLUMN_17" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tec_tecnico"/>
+		<property name="com.jaspersoft.studio.field.label" value="tec_tecnico"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_tecnico"/>
+	</field>
+	<field name="COLUMN_18" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ruc_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="ruc_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="COLUMN_19" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nco_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="nco_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="COLUMN_20" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dir_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="dir_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="COLUMN_21" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rzc_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="rzc_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="COLUMN_22" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dis_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="dis_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="COLUMN_23" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="act_empresa"/>
+		<property name="com.jaspersoft.studio.field.label" value="act_empresa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_empresa"/>
+	</field>
+	<field name="falla_info" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="falla_info"/>
+		<property name="com.jaspersoft.studio.field.label" value="falla_info"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="obser_info" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="obser_info"/>
+		<property name="com.jaspersoft.studio.field.label" value="obser_info"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="reco_info" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="reco_info"/>
+		<property name="com.jaspersoft.studio.field.label" value="reco_info"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="fecha_info" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fecha_info"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha_info"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="hora_infor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="hora_infor"/>
+		<property name="com.jaspersoft.studio.field.label" value="hora_infor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="nserie_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nserie_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="nserie_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="nom_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nom_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="nom_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="mca_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mca_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="mca_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="mod_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mod_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="mod_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="arubi_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="arubi_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="arubi_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="volt_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="volt_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="volt_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="amp_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="amp_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="amp_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="pot_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pot_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="pot_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="tem_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tem_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="tem_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="pre_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pre_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="pre_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="gas_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="gas_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="gas_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="otros_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="otros_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="otros_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="act_maquina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="act_maquina"/>
+		<property name="com.jaspersoft.studio.field.label" value="act_maquina"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<field name="id_info" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_info"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_info"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_informetecnico"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="128" splitType="Stretch">
+			<rectangle>
+				<reportElement x="3" y="1" width="550" height="119" forecolor="#030303" backcolor="#FFFFFF" uuid="1d4277bf-a552-4d68-a0b6-7dcd59e07c72"/>
+			</rectangle>
+			<line>
+				<reportElement x="260" y="1" width="1" height="89" uuid="2271d6ad-4392-41aa-a130-ac31006ea8ac"/>
+			</line>
+			<rectangle radius="5">
+				<reportElement x="390" y="40" width="155" height="39" uuid="407b7fbb-1896-4689-ae65-90201eaf1f7c"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#030303"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="270" y="5" width="50" height="20" uuid="c309e620-5efb-43a8-8854-4da5fd44e93d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="5" width="42" height="20" uuid="82b46ccc-62ef-4e54-acb1-94761b9489c6"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Hora:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="260" y="30" width="293" height="1" uuid="327d70ec-73f3-474f-accc-ad51a1d91a65"/>
+			</line>
+			<staticText>
+				<reportElement x="257" y="34" width="130" height="54" forecolor="#FF3D00" uuid="076642f3-4878-4a62-8ec6-03f3a70bd14b"/>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORME TÉCNICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="43" width="34" height="34" forecolor="#FF0703" uuid="5aa496c0-07db-4a35-b05d-43c035bfb209"/>
+				<textElement>
+					<font size="25" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nº]]></text>
+			</staticText>
+			<line>
+				<reportElement x="3" y="90" width="550" height="1" uuid="3070e35d-d56d-411d-92ed-9abd73cc937a"/>
+			</line>
+			<staticText>
+				<reportElement x="4" y="96" width="548" height="26" uuid="fc50ecd5-8b00-41ce-afea-a04c5e8f3086"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[RUC: 20600758854          CEL: 946 233 255          CORREO: contacto@refrifresh.com ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="154" y="91" width="1" height="29" uuid="b684e561-ca88-46aa-b54a-5f17c00dc8f8"/>
+			</line>
+			<line>
+				<reportElement x="305" y="91" width="1" height="29" uuid="1f6e026b-3c3b-4d90-92f8-2deeb2d94953"/>
+			</line>
+			<textField>
+				<reportElement x="320" y="5" width="90" height="20" uuid="9c400d69-96a0-4f0c-95b4-0121593d8f0b"/>
+				<textElement markup="html">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_info}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="5" width="94" height="20" uuid="2efd0b11-e65d-4b58-b971-98fb2305488b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hora_infor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="43" width="106" height="34" uuid="2f9a4f8e-84c4-48cf-bae2-7957a51c8136"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_info}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="621" splitType="Stretch">
+			<rectangle>
+				<reportElement x="3" y="24" width="550" height="66" forecolor="#030303" backcolor="#FFFFFF" uuid="a08b894c-6e4f-418e-befb-b18d9c75c5cb"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="8" y="30" width="33" height="20" uuid="3b0ff19c-266d-45c9-92e7-482c387f8f32"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Ruc:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="30" width="110" height="20" uuid="acd5a9a0-0f78-4fc9-ac2c-15b18a4cccfb"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nombre comercial:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="50" width="73" height="20" uuid="1549d534-a462-42bc-93ec-0fb8ddd46f09"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Razón social:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="70" width="54" height="20" uuid="30a39884-2fd9-418e-bba4-95b2ca90f323"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="70" width="46" height="20" uuid="2bab7c3f-26a4-4735-95c4-ef8b64e5107a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Distrito:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="3" y="119" width="550" height="125" forecolor="#030303" backcolor="#FFFFFF" uuid="d7fe1231-b63d-42f7-af61-166ba5d00b04"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="230" y="124" width="50" height="20" uuid="157a3d01-24a5-4ecc-a671-aba9fb98f8b3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Equipo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="144" width="50" height="20" uuid="44645a91-720b-4f87-bf92-68c1a60a5578"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Marca:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="144" width="50" height="20" uuid="150095cc-cd09-4402-a960-7ce79f77c599"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Modelo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="124" width="50" height="20" uuid="e151c3c1-363b-47ae-aabd-74c51f2438e3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nº Serie:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="164" width="90" height="20" uuid="915f95b5-cc34-4f5e-9562-1cd65aa54a99"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Área/Ubicación:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="3" y="273" width="550" height="45" forecolor="#030303" backcolor="#FFFFFF" uuid="27e5a6d6-53a4-41ee-8980-17a7f34bff81"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="3" y="349" width="550" height="69" forecolor="#030303" backcolor="#FFFFFF" uuid="9a9bdc9a-ac0e-472c-bc93-14f78b33044b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="3" y="450" width="550" height="59" forecolor="#030303" backcolor="#FFFFFF" uuid="f947dc65-5f1d-488e-8921-b37b73e25763"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="184" width="47" height="20" uuid="f078de5e-b790-4b04-b8d9-f7f4cd932824"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Voltaje:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="184" width="57" height="20" uuid="2c37769a-dfe7-42ac-9ffe-732a9c94fab8"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Amperaje:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="204" width="52" height="20" uuid="f3d5de1f-db73-4bfa-b8a6-be87620823cc"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Potencia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="204" width="50" height="20" uuid="a6b51ee4-1e0e-41ac-a527-01a72e164725"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Presión:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="204" width="75" height="20" uuid="0c9f311f-8b87-4f44-9a8b-0c590f1af71f"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Temperatura:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="184" width="30" height="20" uuid="46512458-e15f-4588-9e08-b7ec406cf5ed"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Gas:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="224" width="40" height="20" uuid="87b5f91c-d20a-40c4-84e0-969706275d86"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Otros:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="3" y="541" width="550" height="77" forecolor="#030303" backcolor="#FFFFFF" uuid="df4e24da-557e-4618-b2ed-0dc00537db56"/>
+			</rectangle>
+			<line>
+				<reportElement x="270" y="541" width="1" height="78" uuid="791e3982-6ac4-41a0-b7a0-177557343db9"/>
+			</line>
+			<rectangle>
+				<reportElement x="3" y="4" width="550" height="20" backcolor="#2442AB" uuid="620bad4c-3fec-4bbf-9b20-7fd44a02818e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="8" y="4" width="100" height="20" forecolor="#FFFFFF" uuid="cfee9430-1aa4-4ba7-ac64-ee3daaad712e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="3" y="99" width="550" height="20" backcolor="#2442AB" uuid="e6eca478-a576-4d3e-a1b9-7c58563e02ad"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="100" width="100" height="20" forecolor="#FFFFFF" uuid="d6332acb-90b0-4452-a17f-df0eab2cac6c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Máquina]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="3" y="253" width="550" height="20" backcolor="#2442AB" uuid="70595049-21f5-4ac8-bcf8-33a06d5d6364"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="253" width="246" height="20" forecolor="#FFFFFF" uuid="41237703-f24a-4266-bb79-823c315ef99b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Falla (estado de la máquina)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="3" y="329" width="550" height="20" backcolor="#2442AB" uuid="721fbb9c-f5a2-4c70-8d10-c04dc161e0a2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="329" width="143" height="20" forecolor="#FFFFFF" uuid="872195b0-4867-41eb-81ce-08c6902e9edb"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="3" y="430" width="550" height="20" backcolor="#2442AB" uuid="9ca7ed20-fcbb-4b93-82d8-6a46f95f53b1"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="430" width="143" height="20" forecolor="#FFFFFF" uuid="76d48559-a0ad-400a-814f-0e84738ba2ba"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recomendaciones]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="3" y="521" width="550" height="20" backcolor="#2442AB" uuid="55a2f659-b8b0-4069-bbd2-3fa582ead4aa"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="12" y="521" width="249" height="20" forecolor="#FFFFFF" uuid="bfc9f5ef-b3ac-42d9-9688-194cd47e6003"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="521" width="269" height="20" forecolor="#FFFFFF" backcolor="#79BEDB" uuid="0246defa-0baa-41dc-b34b-4e729287f826"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Técnico]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="37" y="30" width="114" height="20" uuid="fa37cd9b-7775-41cc-a06d-d41986e431fb"/>
+				<textElement verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ruc_empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="30" width="269" height="20" uuid="c428cb08-5444-4d2c-9299-65f83fa8bc02"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nco_empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="50" width="462" height="20" uuid="b8004b2a-5d25-4aa6-a1ac-cd08c7d66c33"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rzc_empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="70" width="308" height="20" uuid="b67d8ca7-0bfe-4b3f-bf7c-52dee28f41c1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dir_empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="70" width="124" height="20" uuid="2a452ac5-833a-46e9-8088-8c6ae69d58fb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dis_empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="124" width="160" height="20" uuid="c46899b2-1a0b-4bcf-b437-48b5ee5b10f9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nserie_maquina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="204" width="143" height="20" uuid="e98478e6-9553-4161-9211-11cf5398aa99"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pre_maquina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="184" width="163" height="20" uuid="cb20c443-8914-4f32-8c8b-a0e1b81404e0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gas_maquina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="204" width="110" height="20" uuid="57228615-fe73-4543-a285-8132b92fca24"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tem_maquina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="212" y="184" width="128" height="20" uuid="805772de-f742-4ab9-827f-650439a6ca81"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amp_maquina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="62" y="204" width="93" height="20" uuid="bfd42596-f07c-47d4-8c93-d54741de0ccf"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pot_maquina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="224" width="493" height="20" uuid="10bb139e-5ce9-4661-a181-83967a96fc65"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{otros_maquina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="57" y="184" width="98" height="20" uuid="c43f3887-098c-4adb-812c-96400bf3e0fa"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{volt_maquina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="164" width="443" height="20" uuid="47418d9d-42f8-41b3-9466-c87f90846e74"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{arubi_maquina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="144" width="160" height="20" uuid="6559dbd3-d86f-4869-b84a-975e662d7ee9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mca_maquina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="144" width="263" height="20" uuid="b9177a4f-7654-4d5f-bd4b-cfbcb3a0ff2b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mod_maquina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="124" width="263" height="20" uuid="57bcde71-58f5-49b5-876c-0f835c37ee01"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom_maquina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="273" width="532" height="44" uuid="8375ee09-409f-49b3-b588-c813daaf626c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{falla_info}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="349" width="532" height="69" uuid="7b2928da-191e-4991-ad64-c0ebed897544"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obser_info}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="12" y="450" width="530" height="59" uuid="e190e07f-077a-45de-a236-56f1c2d8122e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reco_info}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="541" width="120" height="76" uuid="0adfdeb8-8743-4113-991e-c35e19bb8a4d"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tec_tecnico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="12" y="540" width="108" height="78" uuid="b180270a-2f6e-42e4-9295-3e0381804c83"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rzc_empresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="452" y="3" width="100" height="26" uuid="b587d37e-5b95-4a01-be4f-486c1083a006"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
